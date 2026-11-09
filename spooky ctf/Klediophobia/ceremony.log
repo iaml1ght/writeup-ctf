@@ -1,0 +1,13 @@
+2026-10-25T04:32:38Z HSM  INIT         slot=03 status=OK
+2026-10-25T04:32:39Z KEY  GENERATE     object=OBJ-0001 curve=P-384 status=OK
+2026-10-25T04:32:40Z CSR  CREATE       object=OBJ-0001 certificate=ST-ISS-01 status=OK
+2026-10-25T04:32:41Z KEY  GENERATE     object=OBJ-0002 curve=P-384 status=OK
+2026-10-25T04:32:42Z CSR  CREATE       object=OBJ-0002 certificate=ST-ISS-02 status=OK
+2026-10-25T04:32:43Z KEY  GENERATE     object=OBJ-0003 curve=P-384 status=OK
+2026-10-25T04:32:44Z HSM  WRAP         object=OBJ-0003 mechanism=AES256-GCM status=OK
+2026-10-25T04:32:45Z HSM  UNWRAP       source=OBJ-0003 object=OBJ-0003-R handler=compat-restore status=OK
+2026-10-25T04:32:46Z CSR  CREATE       object=OBJ-0003-R certificate=ST-ISS-03 status=OK
+2026-10-25T04:32:47Z KEY  GENERATE     object=OBJ-0004 curve=P-384 status=OK
+2026-10-25T04:32:48Z CSR  CREATE       object=OBJ-0004 certificate=ST-ISS-04 status=OK
+2026-10-25T04:32:49Z ROOT SIGN_BATCH   signed=4 failures=0 status=OK
+2026-10-25T04:32:50Z CERT VERIFY_BATCH certificates=4 failures=0 status=OK
